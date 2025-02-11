@@ -39,13 +39,15 @@
             z-index: 1;
         }
         body {
-            background-color: #fff;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='flower-pattern' patternUnits='userSpaceOnUse' width='100' height='100'%3E%3Cg fill='rgba(128, 0, 128, 0.1)' stroke='none'%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3Ccircle cx='42' cy='50' r='8'/%3E%3Ccircle cx='58' cy='50' r='8'/%3E%3Ccircle cx='50' cy='42' r='8'/%3E%3Ccircle cx='50' cy='58' r='8'/%3E%3C/g%3E%3Cg fill='rgba(128, 0, 128, 0.08)' stroke='none'%3E%3Ccircle cx='10' cy='10' r='4'/%3E%3Ccircle cx='6' cy='10' r='4'/%3E%3Ccircle cx='14' cy='10' r='4'/%3E%3Ccircle cx='10' cy='6' r='4'/%3E%3Ccircle cx='10' cy='14' r='4'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23flower-pattern)'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 100px 100px;
+            background-image: url('./anaya.jpg');  /* Update with your image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
         }
         header {
-            background-color: #c258b2;
+            background-color: rgba(194, 88, 178, 0.9);  /* Made slightly transparent */
             color: white;
             padding: 1rem;
             text-align: center;
@@ -54,7 +56,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);  /* Made more transparent */
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
@@ -109,7 +111,7 @@
             background-color: #9a009a;
         }
         footer {
-            background-color: #800080;
+            background-color: rgba(128, 0, 128, 0.9);  /* Made slightly transparent */
             color: white;
             text-align: center;
             padding: 1rem;
@@ -127,6 +129,7 @@
     </style>
 </head>
 <body>
+    <!-- Rest of the HTML remains the same -->
     <header>
         <h1>Shayanita</h1>
         <p>Welcome to our online store</p>
@@ -203,7 +206,7 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Anaya All rights reserved.</p>
+        <p>&copy; 2025 Anaya, All rights reserved.</p>
     </footer>
 </body>
 </html>
