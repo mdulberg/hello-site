@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayanita - Online Store</title>
+    <title>Anaya - Online Store</title>
     <style>
-        /* [Previous styles remain the same] */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
-        /* [Your existing styles up to product-title-faded] */
-
-        /* Add new styles for the overlay */
+        /* Product image zoom styles */
         .product-image-container {
             position: relative;
+            overflow: hidden;
+            height: 200px;
         }
-
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-image-container:hover .product-image {
+            transform: scale(1.2);
+        }
         .best-seller-overlay {
             position: absolute;
             top: 10px;
@@ -30,9 +36,8 @@
             font-size: 0.9rem;
             color: #502f3e;
             font-weight: bold;
+            z-index: 1;
         }
-
-        /* [Rest of your existing styles] */
         body {
             background-color: #fff;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='flower-pattern' patternUnits='userSpaceOnUse' width='100' height='100'%3E%3Cg fill='rgba(128, 0, 128, 0.1)' stroke='none'%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3Ccircle cx='42' cy='50' r='8'/%3E%3Ccircle cx='58' cy='50' r='8'/%3E%3Ccircle cx='50' cy='42' r='8'/%3E%3Ccircle cx='50' cy='58' r='8'/%3E%3C/g%3E%3Cg fill='rgba(128, 0, 128, 0.08)' stroke='none'%3E%3Ccircle cx='10' cy='10' r='4'/%3E%3Ccircle cx='6' cy='10' r='4'/%3E%3Ccircle cx='14' cy='10' r='4'/%3E%3Ccircle cx='10' cy='6' r='4'/%3E%3Ccircle cx='10' cy='14' r='4'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23flower-pattern)'/%3E%3C/svg%3E");
@@ -69,11 +74,6 @@
         .product-card:hover {
             transform: translateY(-7px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .product-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
         }
         .product-info {
             padding: 1rem;
@@ -119,7 +119,6 @@
             .container {
                 padding: 1rem;
             }
-            
             .products {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 1rem;
@@ -136,7 +135,9 @@
         <div class="products">
             <!-- Product 1 -->
             <div class="product-card">
-                <img src="./1.JPG" alt="Design 1" class="product-image">
+                <div class="product-image-container">
+                    <img src="./1.JPG" alt="Design 1" class="product-image">
+                </div>
                 <div class="product-info">
                     <h2 class="product-title">Design 1</h2>
                     <p class="product-price">€3</p>
@@ -157,17 +158,20 @@
             </div>
             <!-- Product 3 -->
             <div class="product-card">
-                <img src="./3.JPG" alt="Design 3" class="product-image">
+                <div class="product-image-container">
+                    <img src="./3.JPG" alt="Design 3" class="product-image">
+                </div>
                 <div class="product-info">
                     <h2 class="product-title">Design 3</h2>
                     <p class="product-price">€3</p>
                     <button class="buy-button">Add to Cart</button>
                 </div>
             </div>
-            
             <!-- Product 4 -->
             <div class="product-card">
-                <img src="./4.JPG" alt="Design 4" class="product-image">
+                <div class="product-image-container">
+                    <img src="./4.JPG" alt="Design 4" class="product-image">
+                </div>
                 <div class="product-info">
                     <h2 class="product-title">Design 4</h2>
                     <p class="product-price">€3</p>
@@ -176,17 +180,20 @@
             </div>
             <!-- Product 5 -->
             <div class="product-card">
-                <img src="./5.JPG" alt="Design 5" class="product-image">
+                <div class="product-image-container">
+                    <img src="./5.JPG" alt="Design 5" class="product-image">
+                </div>
                 <div class="product-info">
                     <h2 class="product-title">Design 5</h2>
                     <p class="product-price">€3</p>
                     <button class="buy-button">Add to Cart</button>
                 </div>
             </div>
-            
             <!-- Product 6 -->
             <div class="product-card">
-                <img src="./6.JPG" alt="Design 6" class="product-image">
+                <div class="product-image-container">
+                    <img src="./6.JPG" alt="Design 6" class="product-image">
+                </div>
                 <div class="product-info">
                     <h2 class="product-title">Design 6</h2>
                     <p class="product-price">€3</p>
@@ -196,7 +203,7 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Shayanita. All rights reserved.</p>
+        <p>&copy; 2025 Anaya All rights reserved.</p>
     </footer>
 </body>
 </html>
